@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ScriptLoaderService} from '../../../../_services/script-loader.service';
+import {HttpClient} from "@angular/common/http";
 
 
 @Component({
@@ -9,13 +10,17 @@ import {ScriptLoaderService} from '../../../../_services/script-loader.service';
 })
 export class IndexComponent implements OnInit, AfterViewInit {
 
+  json: any;
 
-  constructor(private _script: ScriptLoaderService) {
+  constructor(private _script: ScriptLoaderService, private  http: HttpClient) {
 
   }
 
   ngOnInit() {
-
+    this.http.get("/api/hello").subscribe(data => {
+        this.json = JSON.stringify(data);
+      }
+    )
   }
 
   ngAfterViewInit() {
