@@ -50,7 +50,7 @@ public class GenericIntrospectedTable extends IntrospectedTableMyBatis3Impl {
                 FullyQualifiedJavaType model = iterator.next();
                 FullyQualifiedJavaType example = iterator.next();
 
-                String baseMapperPackage = "cn.heweiming.ssm.mybatis.base";
+                String baseMapperPackage = "io.heweiming.boot.mybatis.base";
                 String baseMapperName = "BaseMapper";
 
                 String modelName = model.getShortName();
