@@ -1,4 +1,4 @@
-package io.heweiming.boot.codegen;
+package io.heweiming.boot.generator.freemarker;
 
 import java.io.File;
 import java.io.FileOutputStream;
