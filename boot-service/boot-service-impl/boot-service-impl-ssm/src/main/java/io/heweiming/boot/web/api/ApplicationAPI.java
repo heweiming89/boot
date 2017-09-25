@@ -1,4 +1,4 @@
-package io.heweiming.boot.api;
+package io.heweiming.boot.web.api;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

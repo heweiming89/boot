@@ -1,7 +1,4 @@
-package io.heweiming.boot.api.impl;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package io.heweiming.boot.web.api.impl;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.interfaces.RSAPrivateKey;
@@ -10,6 +7,8 @@ import java.security.spec.InvalidKeySpecException;
 import java.util.UUID;
 
 import org.joda.time.LocalDateTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,9 +17,9 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 
-import io.heweiming.boot.api.ApplicationAPI;
 import io.heweiming.boot.properties.RSAEncryptionProperties;
 import io.heweiming.boot.web.AjaxResponse;
+import io.heweiming.boot.web.api.ApplicationAPI;
 
 @RestController
 public class ApplicationAPIImpl implements ApplicationAPI {

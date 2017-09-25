@@ -1,4 +1,4 @@
-package io.heweiming.boot.api;
+package io.heweiming.boot.web.api;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
