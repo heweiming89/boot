@@ -8,6 +8,6 @@
   <artifactId>boot-generator</artifactId>
   <packaging>pom</packaging>
   <modules>
-      <module>boot-codegen-ssm</module>
+      <module>boot-generator-ssm</module>
   </modules>
 </project>
