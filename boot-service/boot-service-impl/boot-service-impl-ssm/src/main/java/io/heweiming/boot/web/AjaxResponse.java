@@ -34,7 +34,7 @@ public class AjaxResponse<T> {
     private String message;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS")
-    private LocalDateTime dateTime;
+    private LocalDateTime responseTime;
 
     @ApiModelProperty(value = "返回参数", dataType = "T", example = "", required = true)
     private T data;
@@ -91,7 +91,7 @@ public class AjaxResponse<T> {
         return this;
     }
 
-    public LocalDateTime getDateTime() {
+    public LocalDateTime getResponseTime() {
         return LocalDateTime.now();
     }
 
