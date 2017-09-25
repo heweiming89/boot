@@ -12,7 +12,7 @@ export class IndexComponent implements OnInit, AfterViewInit {
 
   json: any;
 
-  constructor(private _script: ScriptLoaderService, private  http: HttpClient) {
+  constructor(private _script: ScriptLoaderService, private http: HttpClient) {
 
   }
 

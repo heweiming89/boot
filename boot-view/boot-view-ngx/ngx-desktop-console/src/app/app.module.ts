@@ -10,7 +10,10 @@ import {ScriptLoaderService} from './_services/script-loader.service';
 import {ThemeRoutingModule} from './theme/theme-routing.module';
 import {AuthModule} from './auth/auth.module';
 import {GlobalErrorHandler} from './_services/error-handler.service';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {JWTAuthenticationService} from "./services/JWTAuthenticationService";
+import {JWTAuthenticationInterceptor} from "./interceptor/JWTAuthenticationInterceptor";
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import {HttpClientModule} from "@angular/common/http";
     AuthModule,
     HttpClientModule
   ],
-  providers: [ScriptLoaderService, {provide: ErrorHandler, useClass: GlobalErrorHandler}],
+  providers: [ScriptLoaderService,
+    JWTAuthenticationService,
+    {provide: ErrorHandler, useClass: GlobalErrorHandler},
+    {provide: HTTP_INTERCEPTORS, useClass: JWTAuthenticationInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
