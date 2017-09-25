@@ -24,18 +24,7 @@
         "../node_modules/primeng/resources/themes/bootstrap/theme.css"
       ],
       "scripts": [
-        "../node_modules/amcharts3/amcharts/amcharts.js",
-        "../node_modules/amcharts3/amcharts/serial.js",
-        "../node_modules/amcharts3/amcharts/themes/light.js",
-        "../node_modules/amcharts3/amcharts/lang/zh.js",
-        "../node_modules/ammap3/ammap/ammap.js",
-        "../node_modules/amcharts3/amcharts/pie.js",
-        "../node_modules/amcharts3/amcharts/radar.js",
-        "../node_modules/amstock3/amcharts/amstock.js",
-        "../node_modules/amcharts3/amcharts/plugins/animate/animate.min.js",
-        "../node_modules/ammap3/ammap/maps/js/usaLow.js",
-        "../node_modules/ammap3/ammap/maps/js/worldLow.js",
-        "../node_modules/ammap3/ammap/maps/js/worldHigh.js"
+
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
