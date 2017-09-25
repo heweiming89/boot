@@ -64,7 +64,7 @@ public class SSMApplicationTest {
         String token = JWT.create()//
                 .withJWTId(UUID.randomUUID().toString())//
                 .withSubject("admin")//
-                .withIssuer("heweiming")//
+                .withIssuer("ssm")//
                 .withAudience("admin", "user")//
                 .withIssuedAt(now.toDate())//
                 .withExpiresAt(now.plusMinutes(30).toDate())//

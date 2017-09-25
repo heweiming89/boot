@@ -23,19 +23,21 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import io.heweiming.boot.properties.RSAEncryptionProperties;
 
 /**
- * @author heweiming  2017年9月23日 下午5:20:05
+ * @author heweiming 2017年9月23日 下午5:20:05
  * @version 1.0.0
- * @description 
+ * @description
  */
 public class JwtUserUtils {
     /**
      * Logger for this class
      */
     private static final Logger logger = LoggerFactory.getLogger(JwtUserUtils.class);
+    
+    private static final String TOKEN_PREFIX = "Bearer ";
 
     public static String getToken(HttpServletRequest request) throws NoSuchAlgorithmException, InvalidKeySpecException {
         String token = request.getHeader(HttpHeaders.AUTHORIZATION);
-        return token;
+        return token.replace(TOKEN_PREFIX , "");
     }
 
     private static WebApplicationContext getWebApplicationContext(HttpServletRequest request) {
