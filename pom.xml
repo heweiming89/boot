@@ -20,6 +20,7 @@
 		<module>boot-service</module>
 		<module>boot-web</module>
 		<module>boot-mock</module>
+		<module>boot-generator</module>
 	</modules>
 
 	<prerequisites>

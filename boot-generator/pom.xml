@@ -5,7 +5,7 @@
     <artifactId>boot</artifactId>
     <version>1.0.0</version>
   </parent>
-  <artifactId>boot-codegen</artifactId>
+  <artifactId>boot-generator</artifactId>
   <packaging>pom</packaging>
   <modules>
       <module>boot-codegen-ssm</module>
