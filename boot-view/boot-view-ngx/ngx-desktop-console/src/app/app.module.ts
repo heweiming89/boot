@@ -13,6 +13,7 @@ import {GlobalErrorHandler} from './_services/error-handler.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {JWTAuthenticationService} from "./services/JWTAuthenticationService";
 import {JWTAuthenticationInterceptor} from "./interceptor/JWTAuthenticationInterceptor";
+import {LocalStorageService, SessionStorageService} from "ng2-webstorage";
 
 
 @NgModule({
@@ -30,6 +31,8 @@ import {JWTAuthenticationInterceptor} from "./interceptor/JWTAuthenticationInter
     HttpClientModule
   ],
   providers: [ScriptLoaderService,
+    LocalStorageService,
+    SessionStorageService,
     JWTAuthenticationService,
     {provide: ErrorHandler, useClass: GlobalErrorHandler},
     {provide: HTTP_INTERCEPTORS, useClass: JWTAuthenticationInterceptor, multi: true}],

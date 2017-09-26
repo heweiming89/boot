@@ -11,12 +11,15 @@ import {HttpClient} from "@angular/common/http";
 export class IndexComponent implements OnInit, AfterViewInit {
 
   json: any;
+  currentUser: any;
+  token: any;
 
   constructor(private _script: ScriptLoaderService, private http: HttpClient) {
 
   }
 
   ngOnInit() {
+    this.currentUser = localStorage.getItem("currentUser");
     this.http.get("/api/hello").subscribe(data => {
         this.json = JSON.stringify(data);
       }
